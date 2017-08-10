@@ -1,4 +1,4 @@
-package com.pokemon.Pokemon.dao.command;
+package com.pokemon.pokemon.dao.command;
 
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
@@ -7,14 +7,14 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Consumer;
 
-public class capturePokemonCommand implements Consumer<Long> {
+public class FreePokemonCommand implements Consumer<Long> {
 
     private static final String QUERY = "UPDATE pokemon_trainer " +
-                                        "SET captured = true " +
+                                        "SET captured = false " +
                                         "WHERE ID = :id";
     private NamedParameterJdbcTemplate jdbcTemplate;
 
-    public capturePokemonCommand(JdbcTemplate jdbcTemplate){
+    public FreePokemonCommand(JdbcTemplate jdbcTemplate){
         this.jdbcTemplate = new NamedParameterJdbcTemplate(jdbcTemplate);
     }
 

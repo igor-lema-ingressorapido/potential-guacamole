@@ -1,4 +1,4 @@
-package com.pokemon.Pokemon.model;
+package com.pokemon.pokemon.model;
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;

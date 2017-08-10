@@ -1,33 +1,29 @@
-package com.pokemon.Pokemon.dao.command;
+package com.pokemon.pokemon.dao.command;
 
-import com.pokemon.Pokemon.model.ImmutablePokemon;
-import com.pokemon.Pokemon.model.Pokemon;
+import com.pokemon.pokemon.model.ImmutablePokemon;
+import com.pokemon.pokemon.model.Pokemon;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.function.Function;
+import java.util.List;
+import java.util.function.Supplier;
 
-
-public class findPokemonByIdCommand implements Function<Long, Pokemon> {
+public class GetAllCapturedPokemonCommand implements Supplier<List<Pokemon>> {
 
     private static final String QUERY = "SELECT * " +
                                         "FROM pokemon_trainer " +
-                                        "WHERE ID = :id";
+                                        "WHERE captured = true";
     private NamedParameterJdbcTemplate jdbcTemplate;
 
-    public findPokemonByIdCommand(JdbcTemplate jdbcTemplate){
+    public GetAllCapturedPokemonCommand(JdbcTemplate jdbcTemplate){
         this.jdbcTemplate = new NamedParameterJdbcTemplate(jdbcTemplate);
     }
 
     @Override
-    public Pokemon apply(Long id) {
-        Map<String, Object> parameters = new HashMap();
-        parameters.put("id", id);
+    public List<Pokemon> get() {
         try {
-            return jdbcTemplate.queryForObject(QUERY, parameters,
+            return jdbcTemplate.query(QUERY,
                 (rs, i) -> ImmutablePokemon.builder()
                     .name(rs.getString("name"))
                     .description(rs.getString("info"))

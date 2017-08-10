@@ -1,4 +1,4 @@
-package com.pokemon.Pokemon.dao.command;
+package com.pokemon.pokemon.dao.command;
 
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
@@ -7,14 +7,14 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Consumer;
 
-public class deletePokemonByIdCommand implements Consumer<Long> {
+public class DeletePokemonByIdCommand implements Consumer<Long> {
 
     private static final String QUERY = "DELETE " +
                                         "FROM pokemon_trainer " +
                                         "WHERE ID = :id";
     private NamedParameterJdbcTemplate jdbcTemplate;
 
-    public deletePokemonByIdCommand(JdbcTemplate jdbcTemplate){
+    public DeletePokemonByIdCommand(JdbcTemplate jdbcTemplate){
         this.jdbcTemplate = new NamedParameterJdbcTemplate(jdbcTemplate);
     }
 

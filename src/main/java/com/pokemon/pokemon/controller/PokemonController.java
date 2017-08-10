@@ -1,10 +1,9 @@
-package com.pokemon.Pokemon.controller;
+package com.pokemon.pokemon.controller;
 
-import com.pokemon.Pokemon.model.Pokemon;
-import com.pokemon.Pokemon.service.PokemonService;
+import com.pokemon.pokemon.model.Pokemon;
+import com.pokemon.pokemon.service.PokemonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;

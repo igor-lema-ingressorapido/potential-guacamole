@@ -1,8 +1,8 @@
-package com.pokemon.Pokemon.config;
+package com.pokemon.pokemon.config;
 
-import com.pokemon.Pokemon.dao.PokemonDao;
-import com.pokemon.Pokemon.dao.PokemonDaoImpl;
-import com.pokemon.Pokemon.service.PokemonService;
+import com.pokemon.pokemon.dao.PokemonDao;
+import com.pokemon.pokemon.dao.PokemonDaoImpl;
+import com.pokemon.pokemon.service.PokemonService;
 import com.zaxxer.hikari.HikariDataSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -16,7 +16,7 @@ import javax.sql.DataSource;
  * @author igorlema on 05/08/16
  */
 @Configuration
-public class DaosConfiguration {
+public class Configurations {
 
     @Autowired
     private Environment env;
