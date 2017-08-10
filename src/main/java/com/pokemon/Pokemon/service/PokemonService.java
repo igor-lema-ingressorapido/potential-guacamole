@@ -7,6 +7,9 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Random;
 
+/**
+ * @author igorlema on 06/08/2017
+ */
 @Service
 public class PokemonService {
 

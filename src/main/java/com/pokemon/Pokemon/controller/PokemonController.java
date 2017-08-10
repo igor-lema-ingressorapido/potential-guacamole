@@ -15,6 +15,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
+/**
+ * @author igorlema on 08/08/2017chec
+ */
 @RestController
 public class PokemonController {
 
