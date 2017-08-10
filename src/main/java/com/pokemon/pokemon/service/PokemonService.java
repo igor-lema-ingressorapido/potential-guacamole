@@ -1,8 +1,7 @@
-package com.pokemon.Pokemon.service;
+package com.pokemon.pokemon.service;
 
-import com.pokemon.Pokemon.dao.PokemonDao;
-import com.pokemon.Pokemon.model.Pokemon;
-import org.springframework.stereotype.Service;
+import com.pokemon.pokemon.dao.PokemonDao;
+import com.pokemon.pokemon.model.Pokemon;
 
 import java.util.List;
 import java.util.Random;
@@ -10,7 +9,6 @@ import java.util.Random;
 /**
  * @author igorlema on 06/08/2017
  */
-@Service
 public class PokemonService {
 
    private final PokemonDao pokemonDao;

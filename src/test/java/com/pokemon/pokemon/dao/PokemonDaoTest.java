@@ -1,8 +1,8 @@
-package com.pokemon.Pokemon.dao;
+package com.pokemon.pokemon.dao;
 
-import com.pokemon.Pokemon.config.DaosConfiguration;
-import com.pokemon.Pokemon.model.ImmutablePokemon;
-import com.pokemon.Pokemon.model.Pokemon;
+import com.pokemon.pokemon.config.Configurations;
+import com.pokemon.pokemon.model.ImmutablePokemon;
+import com.pokemon.pokemon.model.Pokemon;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.After;
 import org.junit.Before;
@@ -17,7 +17,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes= DaosConfiguration.class)
+@ContextConfiguration(classes= Configurations.class)
 @TestPropertySource(locations="classpath:application.properties")
 public class PokemonDaoTest {
 

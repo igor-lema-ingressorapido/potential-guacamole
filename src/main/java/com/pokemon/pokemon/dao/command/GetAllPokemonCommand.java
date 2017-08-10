@@ -1,7 +1,7 @@
-package com.pokemon.Pokemon.dao.command;
+package com.pokemon.pokemon.dao.command;
 
-import com.pokemon.Pokemon.model.ImmutablePokemon;
-import com.pokemon.Pokemon.model.Pokemon;
+import com.pokemon.pokemon.model.ImmutablePokemon;
+import com.pokemon.pokemon.model.Pokemon;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
@@ -9,13 +9,13 @@ import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import java.util.List;
 import java.util.function.Supplier;
 
-public class getAllPokemonCommand implements Supplier<List<Pokemon>> {
+public class GetAllPokemonCommand implements Supplier<List<Pokemon>> {
 
     private static final String QUERY = "SELECT * " +
                                         "FROM pokemon_trainer";
     private NamedParameterJdbcTemplate jdbcTemplate;
 
-    public getAllPokemonCommand(JdbcTemplate jdbcTemplate){
+    public GetAllPokemonCommand(JdbcTemplate jdbcTemplate){
         this.jdbcTemplate = new NamedParameterJdbcTemplate(jdbcTemplate);
     }
 

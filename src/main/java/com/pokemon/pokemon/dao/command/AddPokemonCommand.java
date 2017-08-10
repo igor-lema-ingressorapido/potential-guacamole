@@ -1,6 +1,6 @@
-package com.pokemon.Pokemon.dao.command;
+package com.pokemon.pokemon.dao.command;
 
-import com.pokemon.Pokemon.model.Pokemon;
+import com.pokemon.pokemon.model.Pokemon;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 
@@ -9,7 +9,7 @@ import java.util.Map;
 import java.util.function.Consumer;
 
 
-public class addPokemonCommand implements Consumer<Pokemon> {
+public class AddPokemonCommand implements Consumer<Pokemon> {
 
    private final NamedParameterJdbcTemplate jdbcTemplate;
    private String INSERT = "INSERT INTO pokemon_trainer " +
@@ -20,7 +20,7 @@ public class addPokemonCommand implements Consumer<Pokemon> {
                            "  )" +
                            "  VALUES (:name,:info,:captured)";
 
-   public addPokemonCommand(JdbcTemplate jdbcTemplate) {
+   public AddPokemonCommand(JdbcTemplate jdbcTemplate) {
        this.jdbcTemplate = new NamedParameterJdbcTemplate(jdbcTemplate);
    }
 

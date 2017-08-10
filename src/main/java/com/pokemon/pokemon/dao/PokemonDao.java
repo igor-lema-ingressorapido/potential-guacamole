@@ -1,6 +1,6 @@
-package com.pokemon.Pokemon.dao;
+package com.pokemon.pokemon.dao;
 
-import com.pokemon.Pokemon.model.Pokemon;
+import com.pokemon.pokemon.model.Pokemon;
 
 import java.util.List;
 
